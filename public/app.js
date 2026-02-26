@@ -89,6 +89,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const waBtn = document.getElementById("waBtn");
 
   if (waBtn){
+    waBtn.addEventListener("click", () => {
+      gtag("event", "click_whatsapp", {
+        event_category: "RSVP",
+        event_label: "Boton WhatsApp"
+        });
+      });
+      
     const msg = encodeURIComponent(
 `¡Hola! Confirmo mi asistencia a la boda de Jared y Abigail 💍✨
 Número de personas: `
